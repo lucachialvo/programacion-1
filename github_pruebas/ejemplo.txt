@@ -1,1 +1,6 @@
-hola mundo
+git te permite hacer principalmente estas cosas:
+add -> agregar a la cola los archivos
+commit -> crear una snapshot o version de los archivos
+push -> sincroniza cambios, subir archivos a un repositorio externo
+pull -> sincroniza cambios, baja o descarga archivos
+clone -> descargar repositorio completo, distinto a pull
