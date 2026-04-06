@@ -1,24 +1,24 @@
 import random
 
-def binary_search(list, target):
+def binary_search(array, target):
     low = 0
-    high = len(list)-1
+    high = len(array)-1
     
     while low <= high:
-        #para sacar el punto medio, sacamos el promedio de la longitud de la lista
-        midpoint = (high+low)//2
+        #para sacar el punto medio, sacamos el promedio de los indices low y high
+        midpoint = low + (high - low) // 2
         
-        if list[midpoint] == target: #comparamos el valor del *indice* del medio con el target
+        if array[midpoint] == target: #comparamos el valor del *indice* del medio con el target
             return midpoint
-        elif list[midpoint] > target:    
+        elif array[midpoint] > target:    
             high = midpoint -1
         else:
             low = midpoint +1
     return None
 
-def verify(index_of_list):
-    if index_of_list != None:
-        print(f"Target encontrado en indice: {index_of_list}")
+def verify(index_of_array):
+    if index_of_array is not None:
+        print(f"Target encontrado en indice: {index_of_array}")
     else:
         print("numero no encontrado")
 
