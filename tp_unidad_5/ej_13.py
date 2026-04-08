@@ -1,3 +1,5 @@
+# hecho por luca chialvo
+
 puntajes = [451, 1200, 875, 990, 300, 1500, 640]
 print(puntajes)
 print(f"Lista ordenada: {sorted(puntajes)[::-1]}")

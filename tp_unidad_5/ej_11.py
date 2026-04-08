@@ -1,3 +1,4 @@
+# hecho por luca chialvo
 nombres = ["luca", "jose","pablo","candela", "fermin","juan", "mateo", "marcos", "pepe","maria"]
 search = input("Nombre a buscar: ")
 

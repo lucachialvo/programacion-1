@@ -1,3 +1,5 @@
+# hecho por luca chialvo
+
 array = []
 for i in range(8):
     userInput = int(input(f"Ingrese un numero entero ({i}): "))

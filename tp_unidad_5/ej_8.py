@@ -1,3 +1,5 @@
+# hecho por luca chialvo
+
 import random
 
 notas = [
