@@ -8,14 +8,14 @@ n = len(arr)
 temp = arr[-1]
 i = 1
 
-print(arr)
+print(f"Original: {arr}")
 
 while i < n:
     arr[-i] = arr[-i-1]
     i+= 1
 arr[0] = temp
 
-print(arr)
+print(f"Desplazada:\n{arr}")
 
 #tambien se puede hacer con slicings
 array2 = array2[-1:] + array2[:-1]

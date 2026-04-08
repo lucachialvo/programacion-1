@@ -1,7 +1,7 @@
 # hecho por luca chialvo
 # ta te ti
 
-tablero = [["-"]*3 for _ in range(3)]
+tablero = [["-"]*3 for _ in range(3)] # grid de 3x3
 vacias = 9 # contador de casillas vacias
 
 def mostrarTablero(grid):
@@ -13,7 +13,7 @@ def verificarJugada(playerInput, tablero, simbolo):
     row = int(playerInput[1])
     col = int(playerInput[0])
 
-    while (row not in permitidos) or (col not in permitidos) or tablero[row][col] != "-":
+    while (row not in permitidos) or (col not in permitidos) or tablero[row][col] != "-": #la ultima condicion es p/ verificar que la casilla este vacia
         playerInput = input("(Error) Ingrese una opcion valida: ").split(" ")
         row = int(playerInput[1])
         col = int(playerInput[0])
