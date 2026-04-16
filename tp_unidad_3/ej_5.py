@@ -8,6 +8,7 @@ nro_turno = 0
 
 print('--- BIENVENIDO A LA ARENA ---')
 name = input('Nombre del gladiador: ')
+
 #validar name
 while name.isalpha() == False:
     name = input('Error: Solo se permiten letras.\nNombre del gladiador: ')
@@ -18,15 +19,20 @@ print('=== INICIO DEL COMBATE ===')
 while vida_gladiador > 0 and vida_enemigo > 0:
     #menu de acciones:
     print(f'''
-{'=== MENU DE ACCIONES ===' if nro_turno == 0 else '=== NUEVO TURNO ==='}
+{'=== MENU DE ACCIONES ===' if nro_turno == 0 
+                            else '=== NUEVO TURNO ==='}
+
 {name.capitalize()} (HP: {vida_gladiador}) vs Enemigo (HP: {vida_enemigo}) | Pociones: {pociones}
 Elige acción: 
 1. Ataque Pesado
 2. Ráfaga Veloz
 3. Curar''')
     opcion = input('Opcion: ')
-    while (opcion.isdigit() == False) or (opcion > '3' or opcion < '1'):
+    while opcion.isdigit() == False or (
+        opcion > '3' or opcion < '1'):
+        
         opcion = input('Error: Ingrese un número válido.\nOpcion: ')
+    
     nro_turno += 1
     
     if opcion == '1':

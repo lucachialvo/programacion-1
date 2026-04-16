@@ -4,14 +4,14 @@ from random import randint
 PRODUCTOS = 4
 DIAS = 7
 
-# datos de venta random; 1) for es para generar 1 sublista con 7 nros, y el 2do es para repetir esa sublista 4 veces
-ventas = [[randint(0,10)for _ in range(DIAS)] for _ in range(PRODUCTOS)] 
-n = len(ventas)
+ventas = [[randint(0,10)for _ in range(DIAS)] # generar 1 sublista con 7 nros,
+         for _ in range(PRODUCTOS)] # repetir esa sublista 4 veces
 
-ventasDelDia = []
+venta_diaria = []
 for dia in range(DIAS): #sumatoria ventas de los 4 productos durante el dia
-    ventasDelDia.append(sum(producto[dia] for producto in ventas))
-diaConMasVentas = ventasDelDia.index((max(ventasDelDia)))
+    venta_diaria.append(sum(producto[dia] 
+                        for producto in ventas))
+dia_con_mas_ventas = venta_diaria.index(max(venta_diaria))
 
 
 # TABLA
@@ -24,14 +24,16 @@ for producto in range(PRODUCTOS):
 
 
 # DATOS FINALES
-ventasProdSemanal = []
-for i in range(n):
-    totalVentas = sum(ventas[i])
-    # calculas las ventas sumando todos los nros dentro de cada producto [[sum de prod1][sum de prod2][sum de prod3][sum de prod 4]]
-    print(f"Ventas P{i+1}: {totalVentas}") 
-    ventasProdSemanal.append(totalVentas)
+ventas_prod_semanal = []
 
-prodMasVendidoSemanal = ventasProdSemanal.index(max(ventasProdSemanal)) + 1
+for i in range(len(ventas)):
+    total_ventas = sum(ventas[i])
+    # calculas las ventas sumando todos los nros dentro de cada producto 
+    # [[sum de prod1][sum de prod2][sum de prod3][sum de prod 4]]
+    print(f"Ventas P{i+1}: {total_ventas}") 
+    ventas_prod_semanal.append(total_ventas)
 
-print(f"Dia con mas ventas: {diaConMasVentas+1}")
-print(f"Producto mas vendido en la semana: P{prodMasVendidoSemanal}")
+prod_mas_vendido_semanal = ventas_prod_semanal.index(max(ventas_prod_semanal)) + 1
+
+print(f"Dia con mas ventas: {dia_con_mas_ventas + 1}")
+print(f"Producto mas vendido en la semana: P{prod_mas_vendido_semanal}")
